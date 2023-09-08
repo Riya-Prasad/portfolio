@@ -13,6 +13,7 @@ ScrollTrigger.create({
   ease: "power3.easeOut",
 });
 
+
 // work horizontal scroll
 ScrollTrigger.matchMedia({
   "(min-width:580px)": () => {
@@ -58,6 +59,7 @@ revealContainers.forEach((container) => {
     ease: Power2.out,
   });
 });
+
 
 // split text animation
 window.addEventListener("load", function () {
@@ -154,3 +156,4 @@ jQuery(document).ready(function () {
 jQuery(window).on("load", function () {
   document.body.classList.add("loaded");
 });
+
