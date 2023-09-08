@@ -415,10 +415,9 @@ section {
   color: #fff;
   margin-bottom: 0;
   width: 100%;
-  height: 60vh;
   position: fixed;
   left: 0;
-  bottom: 0;
+  bottom: 25px;
   z-index: 0;
   padding-top: 2em;
   .container {
@@ -760,14 +759,14 @@ section {
     }
   }
 
-  .work-sec {
-    .container {
-      .works {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  }
+  // .work-sec {
+  //   .container {
+  //     .works {
+  //       flex-direction: column;
+  //       align-items: center;
+  //     }
+  //   }
+  // }
 
   .footer {
     .container {

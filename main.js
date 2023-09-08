@@ -13,25 +13,20 @@ ScrollTrigger.create({
   ease: "power3.easeOut",
 });
 
-
 // work horizontal scroll
-ScrollTrigger.matchMedia({
-  "(min-width:580px)": () => {
-    let horizontalSection = document.querySelector(".works");
+let horizontalSection = document.querySelector(".works");
 
-    gsap.to(".works", {
-      x: () => horizontalSection.scrollWidth * -1,
-      xPercent: 100,
-      scrollTrigger: {
-        trigger: ".works",
-        start: "center center",
-        end: "+=2000px",
-        pin: ".work-sec",
-        scrub: 2,
-        ease: "power4.easeInOut",
-        invalidateOnRefresh: true,
-      },
-    });
+gsap.to(".works", {
+  x: () => horizontalSection.scrollWidth * -1,
+  xPercent: 100,
+  scrollTrigger: {
+    trigger: ".works",
+    start: "center center",
+    end: "+=2000px",
+    pin: ".work-sec",
+    scrub: 2,
+    ease: "power4.easeInOut",
+    invalidateOnRefresh: true,
   },
 });
 
@@ -59,7 +54,6 @@ revealContainers.forEach((container) => {
     ease: Power2.out,
   });
 });
-
 
 // split text animation
 window.addEventListener("load", function () {
@@ -156,4 +150,3 @@ jQuery(document).ready(function () {
 jQuery(window).on("load", function () {
   document.body.classList.add("loaded");
 });
-
