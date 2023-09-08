@@ -661,6 +661,10 @@ section {
   .project .container .project-img {
     order: 2;
   }
+  .work-sec .container .works {
+    flex-direction: column;
+    align-items: center;
+  }
   .footer .container .contact-info .contact-img {
     display: none;
   }

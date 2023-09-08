@@ -14,19 +14,23 @@ ScrollTrigger.create({
 });
 
 // work horizontal scroll
-let horizontalSection = document.querySelector(".works");
+ScrollTrigger.matchMedia({
+  "(min-width:580px)": () => {
+    let horizontalSection = document.querySelector(".works");
 
-gsap.to(".works", {
-  x: () => horizontalSection.scrollWidth * -1,
-  xPercent: 100,
-  scrollTrigger: {
-    trigger: ".works",
-    start: "center center",
-    end: "+=2000px",
-    pin: ".work-sec",
-    scrub: 2,
-    ease: "power4.easeInOut",
-    invalidateOnRefresh: true,
+    gsap.to(".works", {
+      x: () => horizontalSection.scrollWidth * -1,
+      xPercent: 100,
+      scrollTrigger: {
+        trigger: ".works",
+        start: "center center",
+        end: "+=2000px",
+        pin: ".work-sec",
+        scrub: 2,
+        ease: "power4.easeInOut",
+        invalidateOnRefresh: true,
+      },
+    });
   },
 });
 
