@@ -483,7 +483,6 @@ section {
     .about-title {
       overflow: hidden;
       color: var(--dark-heading-color);
-      opacity: 0.9;
       font-size: var(--fs-heading);
       line-height: 1.5;
       width: 80%;
@@ -513,6 +512,8 @@ section {
           border-radius: 50px;
           background-color: var(--dark-heading-color);
           color: var(--secondary-color);
+          flex-grow: 1  ;
+          text-align: center; 
         }
       }
     }
