@@ -1,12 +1,4 @@
-@font-face {
-  font-family: "Thunder-LLC";
-  src: url("./assets/fonts/Thunder-LightLC.ttf");
-}
-
-@font-face {
-  font-family: "Thunder-MHC";
-  src: url("./assets/fonts/Thunder-MediumHC.ttf");
-}
+@import url('https://fonts.googleapis.com/css2?family=Fahkwang:wght@300;400&display=swap');
 
 @font-face {
   font-family: "Grotta";
@@ -19,11 +11,11 @@
   --link-color: #636363;
   --bg-color: #e7e7e7;
 
-  --heading-font: "Thunder-LLC";
-  --bold-heading-font: "Thunder-MHC";
+  --heading-font: "Fahkwang";
+  --bold-heading-font: "Fahkwang";
   --body-font: "Grotta";
 
-  --fs-big-heading: 75px;
+  --fs-big-heading: 43px;
   --fs-heading: 24px;
   --fs-link: 16px;
   --fs-body: 14px;
@@ -34,7 +26,7 @@
 
 @media (max-width: 860px) {
   :root {
-    --fs-big-heading: 50px;
+    --fs-big-heading: 35px;
   }
 }
 
@@ -51,7 +43,7 @@
 
 @media (max-width: 548px) {
   :root {
-    --fs-big-heading: 38px;
+    --fs-big-heading: 28px;
     --fs-heading: 20px;
     --fs-link: 14px;
     --fs-body: 12px;
@@ -150,6 +142,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   justify-content: center;
+  gap: 5em !important;
 }
 
 .flex {
@@ -513,7 +506,7 @@ section {
           background-color: var(--dark-heading-color);
           color: var(--secondary-color);
           flex-grow: 1  ;
-          text-align: center; 
+          text-align: center;
         }
       }
     }
