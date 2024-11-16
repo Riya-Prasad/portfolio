@@ -91,27 +91,6 @@ ScrollTrigger.create({
 	ease: "power3.easeOut",
 });
 
-// work horizontal scroll
-// ScrollTrigger.matchMedia({
-// 	"(min-width:580px)": () => {
-// 		let horizontalSection = document.querySelector(".works");
-
-// 		gsap.to(".works", {
-// 			x: () => horizontalSection.scrollWidth * -1,
-// 			xPercent: 100,
-// 			scrollTrigger: {
-// 				trigger: ".works",
-// 				start: "center center",
-// 				end: "+=2000px",
-// 				pin: ".work-sec",
-// 				scrub: 2,
-// 				ease: "power4.easeInOut",
-// 				invalidateOnRefresh: true,
-// 			},
-// 		});
-// 	},
-// });
-
 // works page work image reveal animation
 let revealContainers = document.querySelectorAll(".works-img");
 

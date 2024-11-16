@@ -355,12 +355,12 @@ section {
   pointer-events: none;
   position: absolute;
   width: 40%;
-  height: 40vh;
+  height: 30vh;
   max-height: 250px;
   opacity: 0;
   left: 80%;
-  top: 0;
-  transform: translate3d(calc(-100% - 4vw), -30%, 0) translate3d(0, 10px, 0);
+  top: 10%;
+  transform: translate3d(calc(-100% - 4vw), -30%, 0);
 }
 .work-sec .container .works .work .work-link {
   display: block;
@@ -377,7 +377,7 @@ section {
 }
 .work-sec .container .works .work .work-link:hover .work-img {
   opacity: 1;
-  transform: translate3d(calc(-100% - 6vw), -30%, 0) rotate3d(0, 0, 1, 4deg);
+  transform: translate3d(calc(-100% - 6vw), -30%, 0);
   transition: all 0.4s;
 }
 .work-sec .container .works .work .work-link span {
@@ -444,22 +444,14 @@ section {
 
 .about-me {
   position: relative;
-  align-items: center;
   z-index: 0;
   background-color: var(--dark-heading-color);
-  color: var(--bg-color);
-}
-.about-me .container {
-  text-align: center;
+  color: var(--bg-color) !important;
 }
 .about-me .container .about-title {
-  overflow: hidden;
   font-size: var(--fs-heading);
   line-height: 1.5;
-}
-.about-me .container .about-title span {
-  font-style: italic;
-  color: var(--secondary-color);
+  overflow: hidden;
 }
 .about-me .container .about-title a {
   color: var(--secondary-color);
