@@ -92,7 +92,7 @@ body {
   text-rendering: optimizeSpeed;
   font-family: var(--body-font);
   position: relative;
-  background: var(--bg-color);
+  background: #fff;
   overflow-x: hidden;
 }
 body .cursor {
@@ -256,7 +256,6 @@ section {
 
 .primary-header {
   padding: 1.3em 0;
-  background: var(--bg-color);
 }
 .primary-header .nav-wrapper {
   display: flex;
@@ -537,10 +536,11 @@ section {
 }
 .project .container .bg {
   position: relative;
-  top: -90px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  gap: 5em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid var(--dark-heading-color);
 }
 .project .container .bg .flex {
   gap: 1.5em;
@@ -548,15 +548,31 @@ section {
 .project .container .bg .flex .project-name,
 .project .container .bg .flex .project-role,
 .project .container .bg .flex .project-year {
-  color: #fff;
+  color: var(--dark-heading-color);
   font-family: var(--heading-font);
   font-size: var(--fs-heading);
 }
 .project .container .bg .flex .project-name-info,
 .project .container .bg .flex .project-role-info,
 .project .container .bg .flex .project-year-info {
-  color: #fff;
-  font-size: var(--fs-link);
+  color: #6372e1;
+  font-size: var(--fs-heading);
+}
+.project .container .challenge-heading {
+  color: var(--dark-heading-color);
+  font-size: 32px;
+  display: inline-block;
+  margin-top: 1em;
+}
+.project .container .challenge-subheading {
+  color: var(--dark-heading-color);
+  font-size: 20px;
+  line-height: 1.3;
+  margin-top: 0.5em;
+}
+.project .container .challenge-info {
+  color: var(--link-color);
+  font-size: 20px;
 }
 .project .container .project-heading {
   color: var(--secondary-color);
@@ -565,7 +581,7 @@ section {
 }
 .project .container .project-subheading {
   color: var(--dark-heading-color);
-  font-size: 22px;
+  font-size: var(--fs-big-heading);
   display: inline-block;
   margin-top: 1em;
 }
@@ -573,6 +589,7 @@ section {
   color: var(--link-color);
   font-size: 20px;
   line-height: 1.3;
+  margin-top: 0.5em;
 }
 .project .container .project-info .grid {
   justify-content: space-between;
