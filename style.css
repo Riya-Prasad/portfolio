@@ -69,8 +69,12 @@ html:focus-within {
 
 html,
 body {
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 html.has-scroll-smooth {
@@ -91,7 +95,6 @@ html.has-scroll-smooth {
 body {
   text-rendering: optimizeSpeed;
   font-family: var(--body-font);
-  position: relative;
   background: #fff;
   overflow-x: hidden;
 }
@@ -364,19 +367,19 @@ section {
   pointer-events: none;
   position: absolute;
   width: 40%;
-  height: 30vh;
+  height: 24vh;
   max-height: 250px;
   opacity: 0;
-  left: 80%;
-  top: 10%;
-  transform: translate3d(calc(-100% - 4vw), -30%, 0);
+  left: 30%;
+  top: -48%;
+  transform: scale(0);
 }
 .work-sec .container .works .work .work-link {
   display: block;
   width: -moz-fit-content;
   width: fit-content;
   font-family: var(--heading-font);
-  font-size: 110px;
+  font-size: 70px;
   text-decoration: none;
   color: #6372e1;
   transition: all 0.5s ease-in;
@@ -386,7 +389,7 @@ section {
 }
 .work-sec .container .works .work .work-link:hover .work-img {
   opacity: 1;
-  transform: translate3d(calc(-100% - 6vw), -30%, 0);
+  transform: scale(1);
   transition: all 0.4s;
 }
 .work-sec .container .works .work .work-link span {
@@ -615,15 +618,14 @@ section {
 .project .container .project-images .grid {
   gap: 1em !important;
 }
-.project .container .project-images .accumly-img {
-  height: 800px !important;
-}
 .project .container .project-img {
   position: relative;
-  height: 350px;
+  height: 80vh;
   width: 100%;
 }
 .project .container .project-img img {
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
   border-radius: 20px;
 }
@@ -654,8 +656,17 @@ section {
     justify-content: space-between;
     text-align: center;
   }
-  .project .container .project-info .grid {
+  .project .container .grid {
     grid-template-columns: 1fr;
+  }
+  .project .container .project-img {
+    height: 50vh;
+  }
+  .project .container .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .project .container .grid-2 .project-images {
+    order: 2;
   }
 }
 @media (max-width: 640px) {
@@ -698,7 +709,10 @@ section {
   }
   .work-sec .container .works {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+  }
+  .work-sec .container .works .work .work-link {
+    font-size: 60px;
   }
   .footer .container .contact-info .contact-img {
     display: none;
