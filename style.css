@@ -332,7 +332,7 @@ section {
   z-index: -1;
   display: flex;
   align-items: center;
-  height: 80vh;
+  height: 70vh;
 }
 .hero .container .hero-header {
   font-family: var(--bold-heading-font);
@@ -346,55 +346,44 @@ section {
 
 .work-sec {
   position: relative;
+  padding-bottom: 3em;
   z-index: 1;
 }
 .work-sec .container .works {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
 }
 .work-sec .container .works .work {
-  display: block;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-  margin: 2em 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
   position: relative;
-  border-bottom: 1px solid #6372e1;
-  padding: 1em;
+  border: 1px solid var(--dark-heading-color);
+  padding: 2em;
+  border-radius: 20px;
+  transition: all 0.5s ease-out;
+}
+.work-sec .container .works .work .work-heading {
+  font-size: var(--fs-heading);
+  padding: 1em 0;
 }
 .work-sec .container .works .work .work-img {
-  pointer-events: none;
-  position: absolute;
-  width: 40%;
-  height: 24vh;
-  max-height: 250px;
-  opacity: 0;
-  left: 30%;
-  top: -48%;
-  transform: scale(0);
+  height: 300px;
+  width: 100%;
+  filter: grayscale(100%);
 }
-.work-sec .container .works .work .work-link {
-  display: block;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-family: var(--heading-font);
-  font-size: 70px;
-  text-decoration: none;
-  color: #6372e1;
-  transition: all 0.5s ease-in;
+.work-sec .container .works .work .work-img img {
+  border-radius: 15px;
 }
-.work-sec .container .works .work .work-link:hover {
-  color: var(--link-color);
+.work-sec .container .works .work:hover .work-img {
+  filter: grayscale(0);
+  transition: all 0.7s ease-out;
 }
-.work-sec .container .works .work .work-link:hover .work-img {
-  opacity: 1;
-  transform: scale(1);
-  transition: all 0.4s;
-}
-.work-sec .container .works .work .work-link span {
-  position: relative;
-  display: block;
+.work-sec .container .works .work .button {
+  margin-left: 0;
+  width: 100%;
 }
 
 .footer {
@@ -517,7 +506,7 @@ section {
 }
 .works-sec .container .works .work span {
   font-size: 70px;
-  color: #6372e1;
+  color: var(--secondary-color);
   left: 40%;
   top: 40%;
   position: absolute;
@@ -620,7 +609,7 @@ section {
 }
 .project .container .project-img {
   position: relative;
-  height: 80vh;
+  height: 50vh;
   width: 100%;
 }
 .project .container .project-img img {
@@ -642,6 +631,11 @@ section {
   margin-top: 2em;
 }
 
+@media (max-width: 920px) {
+  .work-sec .container .works {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 798px) {
   .hero {
     padding: 0;
@@ -670,6 +664,12 @@ section {
   }
 }
 @media (max-width: 640px) {
+  .hero .container .hero-header {
+    font-size: 26px;
+  }
+  .work-sec .container .works {
+    grid-template-columns: 1fr;
+  }
   .works-sec .container .works .work {
     flex-direction: column;
     align-items: center;
